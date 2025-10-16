@@ -22,12 +22,12 @@ def generate_password(length=12, use_upper=True, use_lower=True, use_digits=True
 
 
 def main():
-    print("=== 🔐 Secure Password Generator ===")
+    print("===  Secure Password Generator ===")
 
     try:
         length = int(input("Enter password length (e.g., 12): ").strip())
         if length <= 0:
-            print("❌ Length must be greater than 0.")
+            print(" Length must be greater than 0.")
             return
 
         use_upper = input("Include uppercase letters? (y/n): ").strip().lower() == 'y'
@@ -36,11 +36,11 @@ def main():
         use_symbols = input("Include symbols? (y/n): ").strip().lower() == 'y'
 
         password = generate_password(length, use_upper, use_lower, use_digits, use_symbols)
-        print("\n✅ Your secure password:")
-        print(f"🔸 {password}")
+        print("\n Your secure password:")
+        print(f" {password}")
 
     except ValueError as e:
-        print("⚠️ Error:", e)
+        print(" Error:", e)
 
 
 if __name__ == "__main__":
